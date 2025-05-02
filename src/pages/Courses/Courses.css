@@ -1,0 +1,171 @@
+/* Основные стили */
+.courses-page {
+  color: #fff;
+  background-color: #000;
+  min-height: 100vh;
+}
+
+.courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+/* Герой-секция */
+.courses-hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  padding: 0px;
+  text-align: center;
+}
+
+.courses-title {
+  font-size: 2.5rem;
+  color: rgb(0, 232, 86);
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.courses-subtitle {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+/* Вкладки */
+.courses-tabs {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+
+.courses-tab {
+  padding: 12px 25px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  margin-right: 5px;
+  transition: color 0.3s;
+}
+
+.courses-tab.active {
+  color: rgb(0, 232, 86);
+}
+
+.courses-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(0, 232, 86);
+}
+
+.courses-tab:hover:not(.active) {
+  color: rgba(0, 232, 86, 0.7);
+}
+
+/* Контент */
+.courses-content {
+  padding: 20px 0;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Фиксированно 2 колонки */
+  grid-auto-flow: row; /* Явное указание направления потока */
+  gap: 30px;
+}
+.courses-section-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: rgb(0, 232, 86);
+}
+
+/* Карточки курсов */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.course-title {
+  font-size: 1.5rem;
+  margin: 5px 0px;
+  color: rgb(0, 232, 86);
+}
+
+.course-description {
+  line-height: 1.6;
+  margin: 5px 0px;
+}
+
+.course-progress {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Кнопки */
+.course-button {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+  background-color: rgb(0, 232, 86);
+  color: #000;
+}
+
+.course-button:hover {
+  background-color: rgba(0, 232, 86, 0.8);
+}
+
+.course-button.primary {
+  background-color: rgb(0, 232, 86);
+  color: #000;
+}
+
+/* Сообщения */
+.no-courses {
+  color: #777;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.courses-link {
+  color: rgb(0, 232, 86);
+  text-decoration: none;
+}
+
+.courses-link:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .courses-title {
+    font-size: 2rem;
+  }
+  
+  .courses-subtitle {
+    font-size: 1rem;
+  }
+  
+  .courses-tab {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .course-card {
+    padding: 20px;
+  }
+}
