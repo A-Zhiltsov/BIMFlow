@@ -28,6 +28,23 @@
   color: #61dafb;
 }
 
+/* Основной контейнер */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Занимает всю высоту viewport */
+}
+
+/* Основное содержимое */
+.main-content {
+  flex: 1; /* Растягивается, заполняя доступное пространство */
+}
+
+/* Стили для футера */
+.footer {
+  flex-shrink: 0; /* Предотвращает сжатие футера */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

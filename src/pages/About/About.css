@@ -1,0 +1,191 @@
+/* Основные стили страницы */
+.about-page {
+    color: white;
+    background-color: #000;
+    min-height: 100vh;
+  }
+  
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Секция героя */
+  .about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7));
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: rgb(0, 232, 86);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Секция миссии */
+  .about-mission {
+    padding: 80px 0;
+    background-color: #111;
+  }
+  
+  .about-mission h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+  }
+  
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .mission-card {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .mission-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .mission-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .mission-card h3 {
+    color: rgb(0, 232, 86);
+    margin-bottom: 15px;
+  }
+  
+  /* Секция команды */
+  .about-team {
+    padding: 80px 0;
+  }
+  
+  .about-team h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .team-member {
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  .member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 0 auto 20px;
+    background-size: cover;
+    overflow: hidden; /* Обрезает всё, что выходит за границы */
+    position: relative; /* Для позиционирования img */
+  }
+  
+  .member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабирует и обрезает изображение */
+    object-position: center; /* Центрирует изображение */
+}
+  
+  .member-role {
+    color: rgb(0, 232, 86);
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  /* Секция CTA */
+  .about-cta {
+    padding: 80px 0;
+    background-color: #111;
+    text-align: center;
+  }
+  
+  .about-cta h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  .about-cta p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .cta-button {
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .cta-button.primary {
+    background-color: rgb(0, 232, 86);
+    color: #000;
+  }
+  
+  .cta-button.primary:hover {
+    background-color: rgba(0, 232, 86, 0.8);
+  }
+  
+  .cta-button.secondary {
+    border: 2px solid rgb(0, 232, 86);
+    color: rgb(0, 232, 86);
+  }
+  
+  .cta-button.secondary:hover {
+    background-color: rgba(0, 232, 86, 0.1);
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .mission-grid, .team-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
