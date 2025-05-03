@@ -2,22 +2,23 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Courses.css';
 import CourseCard from '../../components/CourseCard/CourseCard.js';
+import {coursesData} from '../../data/courses.js'
 
 const CoursesPage = () => {
     const [activeTab, setActiveTab] = useState('Tekla');
 
     const TeklaCourses = [
         {
-            id: 1,
-            title: "Создание пользовательских компонентов",
-            description: "Полный курс по созданию, параметризации и автоматизации пользовательских компонентов. Вы узнаете об основных типах компонентов, способе их создания и как связать компонент с таблицами Excel для связи с базой данной или проведения сложных расчетов.",
-            linkUrl: "/courses/custom-components",
+            id: coursesData[0].id,
+            title: coursesData[0].title,
+            description: coursesData[0].description,
+            linkUrl: coursesData[0].LinkURL,
         },
         {
-            id: 2,
-            title: "Основы программирования для Tekla Structures",
-            description: "Вводный курс по автоматизации с использованием Tekla Open API, включая работу с .NET и создание собственных плагинов.",
-            linkUrl: "/courses/tekla-programming",
+            id: coursesData[1].id,
+            title: coursesData[1].title,
+            description: coursesData[1].description,
+            linkUrl: coursesData[1].LinkURL,
         },
     ];
 

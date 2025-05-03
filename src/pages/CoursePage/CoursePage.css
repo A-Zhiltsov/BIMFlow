@@ -1,0 +1,208 @@
+/* Основные стили */
+.course-page {
+    color: #fff;
+    background-color: #000;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  
+  /* Шапка курса */
+  .course-header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    padding: 60px 0 40px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .course-header h1 {
+    color: rgb(0, 232, 86);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .course-description {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 800px;
+  }
+  
+  /* Основной контент */
+  .course-content-container {
+    padding: 40px 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .course-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+  }
+  
+  /* Боковая панель */
+  .course-sidebar {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+  }
+  
+  .course-toc {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .course-toc h3 {
+    color: rgb(0, 232, 86);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .course-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .course-toc li {
+    margin-bottom: 10px;
+  }
+  
+  .toc-item {
+    width: 100%;
+    padding: 12px 15px;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .toc-item:hover {
+    background-color: #333;
+  }
+  
+  .toc-item.active {
+    background-color: rgb(0, 232, 86);
+    color: #000;
+    font-weight: bold;
+  }
+  
+  /* Основной контент */
+  .course-main-content {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 30px;
+    min-height: 500px;
+  }
+  
+  .course-main-content h3 {
+    color: rgb(0, 232, 86);
+    margin-top: 0;
+  }
+  
+  /* Навигация */
+  .course-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+  }
+  
+  .nav-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button:hover {
+    background-color: rgb(0, 232, 86);
+    color: #000;
+  }
+  
+  .nav-button.next {
+    margin-left: auto;
+  }
+
+  /* Стили для состояния загрузки */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    color: rgb(0, 232, 86);
+    font-size: 1.5rem;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    margin: 40px 0;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Стили для состояния ошибки */
+  .error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    color: #eb0f0f;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .error a {
+    color: rgb(0, 232, 86);
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 1rem;
+    border: 1px solid rgb(0, 232, 86);
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .error a:hover {
+    background-color: rgb(0, 232, 86);
+    color: #000;
+  }
+  
+  /* Анимация для загрузки */
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 900px) {
+    .course-layout {
+      grid-template-columns: 1fr;
+    }
+    
+    .course-sidebar {
+      position: static;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .course-header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .course-main-content {
+      padding: 20px;
+    }
+  }
