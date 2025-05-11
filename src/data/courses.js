@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Chapter1 from "./Tekla-components/Сhapter1";
+import Chapter2 from "./Tekla-components/Сhapter2";
 
 // src/data/courses.js
 export const coursesData = [
@@ -13,6 +14,11 @@ export const coursesData = [
         id: 1,
         title: "Введение",
         content: Chapter1,
+      },
+      {
+        id: 1,
+        title: "Lorem",
+        content: Chapter2,
       },
       // ... другие разделы
     ]

@@ -1,42 +1,15 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 
+const chapterName = 'Lorem';
+
 const Content = () => (
     <div >
-      <h3>Что такое пользовательские компоненты в Tekla Structures</h3>
+      <h3>Eu ullamco deserunt nisi deserunt exercitation aliqua sit.</h3>
       <p>
-        Пользовательские компоненты — это специальные элементы в Tekla Structures, позволяющие создать собственные соединения, 
-        детали, стыки и узлы. Используя пользовательские компоненты, вы можете создавать уникальные параметрические и 
-        автоматизированные элементы модели, которые будут самостоятельно корректироваться при изменении модели.
-      </p>
-      
-      <h3>Типы пользовательских компонентов</h3>
-      <p>Tekla позволяет создать четыре типа компонентов, это:</p>
-      
-      <ul>
-        <li><strong>Соединение</strong></li>
-        <li><strong>Узел</strong></li>
-        <li><strong>Стык</strong></li>
-        <li><strong>Деталь</strong></li>
-      </ul>
-      
-      <p>
-        <strong>Соединение</strong> – компонент, который позволяет создать узлы соединения деталей (балок, колонн и т.п.). 
-        Для ориентации между собой одна деталь назначается главной, остальные второстепенными.
-      </p>
-      
-      <p>
-        <strong>Узел</strong> – позволяет создать различные элементы в указанном месте на какой-либо одной детали. 
-        С помощью узла можно, например, моделировать торцы деталей или проушины для строповки.
-      </p>
-      
-      <p>
-        <strong>Стык</strong> – данный компонент создает объекты стыка и соединяет вдоль указанной линии.
-      </p>
-      
-      <p>
-        <strong>Деталь</strong> – Данный компонент представляет из себя группу объектов и может включать в себя компоненты 
-        соединений и узлов. Такая деталь обладает свойствами стандартной балки и в модели не обозначаются как компонент.
+        Culpa consequat ex mollit sit do ad proident aliquip quis consectetur non nisi voluptate eiusmod. Nulla aute labore aliquip eiusmod deserunt qui labore velit pariatur ut minim ut in. Magna ad aute eiusmod quis dolore deserunt ad. Consectetur sint elit sint excepteur et est ad.
+
+Adipisicing sit commodo culpa ipsum labore ullamco dolor. Quis proident amet in enim duis reprehenderit quis officia. Sunt dolore incididunt occaecat mollit duis ex est consectetur ut duis enim voluptate velit anim.
       </p>
     </div>
   );

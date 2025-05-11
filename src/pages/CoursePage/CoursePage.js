@@ -26,7 +26,7 @@ const CoursePage = () => {
       </div>
     </div>
   );
-  
+
   if (!course) return (
     <div className="course-page">
       <div className="container">
@@ -50,44 +50,42 @@ const CoursePage = () => {
       </section>
 
       <div className="course-content-container">
-        <div className="container">
-          <div className="course-layout">
-            <aside className="course-sidebar">
-              <nav className="course-toc">
-                <h3>Содержание курса</h3>
-                <ul>
-                  {course.sections.map((section, index) => (
-                    <li key={section.id}>
-                      <button
-                        className={`toc-item ${activeSection === index ? 'active' : ''}`}
-                        onClick={() => setActiveSection(index)}
-                      >
-                        {section.title}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </aside>
+        <div className="course-layout">
+          <aside className="course-sidebar">
+            <nav className="course-toc">
+              <h3>Содержание курса</h3>
+              <ul>
+                {course.sections.map((section, index) => (
+                  <li key={section.id}>
+                    <button
+                      className={`toc-item ${activeSection === index ? 'active' : ''}`}
+                      onClick={() => setActiveSection(index)}
+                    >
+                      {section.title}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
 
-            <main className="course-main-content">
-              <div dangerouslySetInnerHTML={{ __html: course.sections[activeSection].content }} />
-              
-              <div className="course-navigation">
-                {activeSection > 0 && (
-                  <button onClick={() => setActiveSection(activeSection - 1)}>
-                    ← Назад
-                  </button>
-                )}
-                
-                {activeSection < course.sections.length - 1 && (
-                  <button onClick={() => setActiveSection(activeSection + 1)}>
-                    Далее →
-                  </button>
-                )}
-              </div>
-            </main>
-          </div>
+          <main className="course-main-content">
+            <div dangerouslySetInnerHTML={{ __html: course.sections[activeSection].content }} />
+
+            <div className="course-navigation">
+              {activeSection > 0 && (
+                <button onClick={() => setActiveSection(activeSection - 1)}>
+                  ← Назад
+                </button>
+              )}
+
+              {activeSection < course.sections.length - 1 && (
+                <button onClick={() => setActiveSection(activeSection + 1)}>
+                  Далее →
+                </button>
+              )}
+            </div>
+          </main>
         </div>
       </div>
     </div>
