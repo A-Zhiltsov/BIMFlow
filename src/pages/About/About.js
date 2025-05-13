@@ -76,7 +76,7 @@ const AboutPage = () => {
                         <Link to="/courses" className="cta-button primary">
                             Начать обучение
                         </Link>
-                        <Link to="/contacts" className="cta-button secondary">
+                        <Link to="/" className="cta-button secondary">
                             Связаться с нами
                         </Link>
                     </div>
